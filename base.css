@@ -13,6 +13,11 @@ a{
 .navi{
     box-shadow: 2px 2px 2px 0.1px grey;
     height:40px;
+    position: fixed; /* 固定在页面顶部 */
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1000; /* 确保导航栏层级高于其他内容 */
 }
 /* flex布局 */
 .navi ul{
@@ -34,9 +39,10 @@ a{
 .wel{
    
     height:140px;
-    margin-top:30px;
+    margin-top:40px;
     font-size:100px;
     text-align:center;
+    
 }
 /* 身体布局 */
 .bod{

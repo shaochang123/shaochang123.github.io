@@ -7,10 +7,51 @@
     <link rel="stylesheet" href="base.css">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <style>
-       
+        .newdt{
+            margin-top:20px;
+            margin-left:15px;
+            display:flex;
+            background-color: rgba(9, 132, 217,0.5);
+            width:50px;
+            height:200px;
+            transition:width 2s,border-radius 2s;
+        }
+        .newdt:hover{
+            margin-top:20px;
+            margin-left:15px;
+            display:flex;
+            background-color: rgba(9, 132, 217,0.5);
+            width:1400px;
+            height:200px;
+            transition:width 2s;
+            border-radius: 0% 10% 10% 0%;
+        }
+        .time{
+            background-color: rgba(9, 132, 217,0);
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            font-weight: bold;
+            border-right: 1px dashed black;
+            width:50px;
+        }
+        .time div{
+            background-color: rgba(9, 132, 217,0);
+        }
+        .message{
+            background-color: rgba(9, 132, 217,0);
+            margin-left:10px;
+            font-size:30px;
+            color: white;
+            height:200px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
+    <script src="base.js"></script>
+
    <div class="navi">
     <ul>
         <li><a href="index.html">主页</a></li>
@@ -35,8 +76,18 @@
             </div>
         </div>
         <div class="mainbar">
-
+            <div class="newdt">
+               <div class="time">
+                    <div>2025</div>
+                    <div>01</div>
+                    <div>05</div>
+               </div>
+               <div class="message">
+                    完成了我的第一个个人网站，v1.0.0版本。
+               </div>
+            </div>
         </div>
    </div>
+   
 </body>
 </html>
