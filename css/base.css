@@ -1,0 +1,138 @@
+/* 通配符 */
+*{
+    margin:0;
+    padding:0;
+    
+    font-family: '荆南麦圆体';
+}
+/* 链接默认黑色无下划线 */
+a{
+    color:black;
+    text-decoration: none;
+}
+/* 网页最上面的导航界面 */
+.navi{
+    box-shadow: 2px 2px 2px 0.1px grey;
+    height:40px;
+    position: fixed; /* 固定在页面顶部 */
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1000; /* 确保导航栏层级高于其他内容 */
+}
+/* flex布局 */
+.navi ul{
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none; 
+}
+.navi a{
+    line-height:35px;
+    font-size:20px;
+    transition:font-size 2s,color 2s;
+}
+.navi a:hover{
+    color:red;
+    font-size:25px;
+    cursor:pointer;
+}
+/* 欢迎界面 */
+.wel{
+    height:140px;
+    margin-top:40px;
+    padding-top:20px;
+    font-size:100px;
+    text-align:center;
+    background-color: skyblue;
+}
+/* 身体布局 */
+.bod{
+    height:1100px;
+    /* margin-top:30px; */
+    box-shadow:3px 3px 20px 1px grey;
+    display:flex;
+}
+/* 侧栏 */
+.sidebar{
+    width:300px;
+    height:1100px;
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+}
+/* 头像 */
+.sidebar img{
+    margin-top:30px;
+    margin-left:20px;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+}
+/* 主栏 */
+.mainbar{
+    border-left:1px dashed black;
+    margin-left:30px;
+    margin-top:10px;
+    width: 1520px;
+    height: 1100px;
+}
+footer{
+    background-color: rgb(27,27,27);
+    height:100px;
+    
+}
+footer p{
+    background-color: rgb(27,27,27);
+    color:white
+}
+
+/* 定义 3D 空间效果 */
+.scene {
+    margin-left:120px;
+    margin-top:120px;
+    width: 100px;
+    height: 100px;
+    perspective: 900px; /* 控制视角的深度 */
+}
+
+/* 立方体容器 */
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    /*旋转动画*/
+}
+
+/* 每个面的样式 */
+.cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* 前面 */
+.front  { transform: translateZ(100px); -webkit-transform: translateZ(100px); -moz-transform: translateZ(100px); -ms-transform: translateZ(100px); -o-transform: translateZ(100px); }
+/* 后面 */
+.back   { transform: rotateY(180deg) translateZ(100px); background-color: #4682B4; -webkit-transform: rotateY(180deg) translateZ(100px); -moz-transform: rotateY(180deg) translateZ(100px); -ms-transform: rotateY(180deg) translateZ(100px); -o-transform: rotateY(180deg) translateZ(100px); }
+/* 左面 */
+.left   { transform: rotateY(-90deg) translateZ(100px); background-color: #32CD32; -webkit-transform: rotateY(-90deg) translateZ(100px); -moz-transform: rotateY(-90deg) translateZ(100px); -ms-transform: rotateY(-90deg) translateZ(100px); -o-transform: rotateY(-90deg) translateZ(100px); }
+/* 右面 */
+.right  { transform: rotateY(90deg) translateZ(100px); background-color: #FFD700; -webkit-transform: rotateY(90deg) translateZ(100px); -moz-transform: rotateY(90deg) translateZ(100px); -ms-transform: rotateY(90deg) translateZ(100px); -o-transform: rotateY(90deg) translateZ(100px); }
+/* 顶面 */
+.top    { transform: rotateX(90deg) translateZ(100px); background-color: #8A2BE2; -webkit-transform: rotateX(90deg) translateZ(100px); -moz-transform: rotateX(90deg) translateZ(100px); -ms-transform: rotateX(90deg) translateZ(100px); -o-transform: rotateX(90deg) translateZ(100px); }
+/* 底面 */
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-color: #FF8C00; -webkit-transform: rotateX(-90deg) translateZ(100px); -moz-transform: rotateX(-90deg) translateZ(100px); -ms-transform: rotateX(-90deg) translateZ(100px); -o-transform: rotateX(-90deg) translateZ(100px); }
+
+/* 旋转动画 */
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

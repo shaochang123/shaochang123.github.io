@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="description" content="主页">
     <title>lzy's blog</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="shortcut icon" id="favicon" href="img/favicon.svg" type="image/x-icon">
     <style>
     </style>
 </head>
 <body>
-   <script src="base.js"></script>
+   
    <div class="navi">
     <ul>
         <li><a href="index.html" style="color:blue">主页</a></li>
@@ -26,7 +27,7 @@
    <div class="bod">
         <div class="sidebar">
             <a href="https://github.com/shaochang123"><img src="img/headpor.jpg"></a>
-            <div style="margin-top:40px;background-color:rgb(247,247,247);display:flex;justify-content: space-between;">
+            <div style="margin-top:40px;background-color:rgb(247,247,247);display:flex;justify-content: space-between;width:320px">
                 <div style="background-color:skyblue;width: 10px;">
                     
                 </div>
@@ -34,11 +35,26 @@
                     公告
                 </div>
             </div>
+            <div class="scene">
+                <div class="cube">
+                    <div class="cube-face front" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                    <div class="cube-face back" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                    <div class="cube-face left" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                    <div class="cube-face right" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                    <div class="cube-face top" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                    <div class="cube-face bottom" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
+                </div>
+            </div>
         </div>
         <div class="mainbar">
 
         </div>
    </div>
-
+   <footer>
+    <p id="totalVisits">总访问量：0</p>
+    <p id="currentVisitors">当前在线人数：0</p>
+   </footer>
+   
+   <script src="js/base.js"></script>
 </body>
 </html>

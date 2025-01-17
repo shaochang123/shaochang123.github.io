@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h3>欢迎-注册</h3>
+        <div class="alert fade" role="alert">
+            提示消息
+        </div>
+        <div class="form_warp">
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">注册账号名</label>
+                    <input type="text" class="form-control username" placeholder="请在此输入用户名">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">注册密码</label>
+                    <input type="password" class="form-control password" placeholder="请在此输入密码">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">确认密码</label>
+                    <input type="password" class="form-control passwordagain" placeholder="请在此输入密码">
+                </div>
+                <button type="button" class="btn btn-primary btn-login">注册</button>
+                <span style="text-align:right"><a href="案例2-登录.html" style="color:grey;">返回登录界面</a></span>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const myalert = document.querySelector('.alert')
+        function alertfn(msg, isSuccess){
+            myalert.classList.add('show')
+            myalert.innerHTML = msg
+            const bgstyle = isSuccess?'alert-success':'alert-danger'
+            myalert.classList.add(bgstyle)
+            setTimeout(()=>{
+                myalert.classList.remove('show')
+                myalert.classList.remove(bgstyle)
+            },2000)
+        
+        }
+        document.querySelector('.btn-login').addEventListener('click',()=>{
+            const username = document.querySelector('.username').value
+            const password = document.querySelector('.password').value
+            const passwordagain = document.querySelector('.passwordagain').value
+            // console.log(username,password)
+            const uname_reg = /^[A-Za-z0-9]{8,}$/
+            const pword_reg = /^.{6,}$/
+            if(uname_reg.test(username)&&pword_reg.test(password)){
+                if(password==passwordagain){
+                    axios({
+                        url:'http://hmajax.itheima.net/api/register',
+                        method:'post',
+                        data:{
+                            username,
+                            password
+                        }
+                        }).then(result=>{
+                            alertfn(result.data.message,true)
+                        }).catch(error=>{
+                            alertfn(error.response.data.message,false)
+                        })
+                }
+                else{
+                    alertfn('两次密码不一致',false)
+                    return
+                }
+            }
+            else {
+                alertfn('用户名或密码不符合规范', false)
+                // console.log('error')
+                return//阻止代码继续执行
+            }
+        })
+    </script>
+</body>
+</html>

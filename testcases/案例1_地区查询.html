@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    :root{
+        font-size:15px;
+    }
+    body{
+        padding-top:15px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <form id="editForm" class="row">
+            <div class="mb-3 col">
+                <label class="form-label">省份名字</label>
+                <input type="text" value="北京" name="province"
+                class="form-control province" placeholder="请输入省份名称">
+            </div>
+            <div class="mb-3 col">
+                <label class="form-label">城市名字</label>
+                <input type="text" value="北京市" name="city"
+                class="form-control city" placeholder="请输入城市名称">
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary sel-btn">查询
+
+        </button>
+        <br><br>
+        <p>地区列表：</p>
+        <ul class="list-group">
+            <li class="list-group-item">东城区</li>
+        </ul>
+
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+  <script>
+    document.querySelector('.sel-btn').addEventListener
+    (
+        'click', ()=>{
+            let pname = document.querySelector('.province').value
+            let cname = document.querySelector('.city').value
+            axios({
+                url:'http://hmajax.itheima.net/api/area',
+                params:{
+                    pname:pname,//这里可以简写成panme
+                    cname:cname
+                }
+            }).then(result=>{
+                
+                if(result.data.list.length==0){
+                    document.querySelector('.list-group-item').innerHTML='请确认省份和城市是否输入正确'
+                }
+                else {
+                    let list = result.data.list
+                    list = list.map(areaName => `<li class="list-group-item">${areaName}</li>`)
+                    document.querySelector('.list-group-item').innerHTML=list.join('')
+                }
+            })
+    })
+  </script>
+</body>
+</html>
