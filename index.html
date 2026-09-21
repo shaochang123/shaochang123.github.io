@@ -1,60 +1,136 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="主页">
-    <title>lzy's blog</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="shortcut icon" id="favicon" href="img/favicon.svg" type="image/x-icon">
-    <style>
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhaoyang Lu is an undergraduate in Artificial Intelligence at Shanghai University, interested in embodied intelligence, robot perception, and motion retargeting.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Zhaoyang Lu | Shanghai University</title>
+  <link rel="canonical" href="https://shaochang123.github.io/">
+  <link rel="icon" href="img/monogram.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css?v=3">
+  <link rel="stylesheet" href="css/home.css?v=3">
+  <script src="js/home.js" defer></script>
 </head>
-<body>
-   
-   <div class="navi">
-    <ul>
-        <li><a href="index.html" style="color:blue">主页</a></li>
-        <li><a href="dt.html">动态</a></li>
-        <li><a href="about_me.html">关于我</a></li>
-        <li><a href="recommend.html">推荐</a></li>
-    </ul>
-
-   </div>
-   <div class="wel">
-    欢迎来到我的主页
-   </div>
-   <div class="bod">
-        <div class="sidebar">
-            <a href="https://github.com/shaochang123"><img src="img/headpor.jpg"></a>
-            <div style="margin-top:40px;background-color:rgb(247,247,247);display:flex;justify-content: space-between;width:320px">
-                <div style="background-color:skyblue;width: 10px;">
-                    
-                </div>
-                <div style="font-size:30px;background-color: rgb(247,247,247);">
-                    公告
-                </div>
-            </div>
-            <div class="scene">
-                <div class="cube">
-                    <div class="cube-face front" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                    <div class="cube-face back" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                    <div class="cube-face left" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                    <div class="cube-face right" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                    <div class="cube-face top" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                    <div class="cube-face bottom" style="background-image: url('img/welbk.jpg');background-size: 100% 100%;"></div>
-                </div>
-            </div>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Zhaoyang Lu, back to top">Zhaoyang Lu<span aria-hidden="true">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about-me" aria-current="location">About me</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#honors-and-awards">Honors &amp; Awards</a>
+        <a href="#education">Education</a>
+        <a href="#hobbies">Hobbies</a>
+      </nav>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="profile" aria-labelledby="profile-name">
+      <a class="avatar-link" href="https://github.com/shaochang123" aria-label="Visit Zhaoyang Lu on GitHub">
+        <img class="avatar" src="img/github-avatar.jpg" alt="Zhaoyang Lu's GitHub avatar: a cat wearing headphones" width="176" height="176" fetchpriority="high">
+      </a>
+      <div class="profile-info">
+        <h1 id="profile-name">Zhaoyang Lu</h1>
+        <p class="profile-role">Undergraduate in AI</p>
+        <p class="profile-affiliation">Shanghai University</p>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+            <a href="mailto:2404412990@shu.edu.cn">2404412990@shu.edu.cn</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Shanghai, China</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.3-4.3-2-6-2m12 4v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.2-1.5 6.2-6.9A5.4 5.4 0 0 0 18.8 4a5 5 0 0 0-.1-3S17.5.7 15 2.3a13 13 0 0 0-6 0C6.5.7 5.3 1 5.3 1a5 5 0 0 0-.1 3 5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.2 6.6 6.2 6.9a3.4 3.4 0 0 0-.9 2.7V21"/></svg>
+            <a href="https://github.com/shaochang123">GitHub <span class="external-arrow" aria-hidden="true">↗</span></a>
+          </li>
+        </ul>
+        <div class="profile-interests">
+          <p class="eyebrow">Research interests</p>
+          <ul class="interest-tags"><li>Embodied intelligence</li><li>Robot perception</li><li>Motion retargeting</li></ul>
         </div>
-        <div class="mainbar">
-
+      </div>
+    </aside>
+    <main class="main-content" id="main-content" tabindex="-1">
+      <section class="content-section about-section" id="about-me" aria-labelledby="about-heading">
+        <div class="section-heading"><h2 id="about-heading">About me</h2><span class="section-number" aria-hidden="true">01</span></div>
+        <p class="intro">Hi, I'm <span class="name-highlight">Zhaoyang</span>, an undergraduate studying <strong>Artificial Intelligence</strong> at <a href="https://www.shu.edu.cn/">Shanghai University</a>.</p>
+        <p>My research interests lie in <mark>embodied intelligence</mark>, robot visual perception, and <strong class="accent-text">human-to-robot motion retargeting</strong>. I work on translating human motion from monocular video into continuous motion for humanoid robots.</p>
+        <p>I have also explored surface electromyography for understanding motor function in older adults and developed autonomous navigation systems with <strong>ROS</strong>. Along the way, programming competitions and mathematical modeling have shaped how I approach problems.</p>
+        <a class="text-link" href="mailto:2404412990@shu.edu.cn">Get in touch <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="content-section" id="news" aria-labelledby="news-heading">
+        <div class="section-heading"><h2 id="news-heading">News</h2><span class="section-number" aria-hidden="true">02</span></div>
+        <ul class="news-list">
+          <li><time datetime="2026-07">Jul 2026</time><p>Completed a project on online humanoid motion retargeting from monocular video, integrating motion estimation and inverse kinematics.</p></li>
+          <li><time datetime="2025-12">Dec 2025</time><p>Received Shanghai University's <strong>Innovation and Entrepreneurship Scholarship</strong> for the second time.</p></li>
+          <li><time datetime="2025-10">Oct 2025</time><p>Our team won a <strong>National First Prize</strong> in the table tennis robot 2D skills finals at the China Robot Competition &amp; RoboCup China.</p></li>
+          <li><time datetime="2024-11">Nov 2024</time><p>Won silver medals at the <strong>ICPC Nanjing and Shenyang Regionals</strong>, and a bronze medal at CCPC Zhengzhou.</p></li>
+        </ul>
+      </section>
+      <section class="content-section" id="publications" aria-labelledby="publications-heading">
+        <div class="section-heading"><h2 id="publications-heading">Publications</h2><span class="section-number" aria-hidden="true">03</span></div>
+        <p class="section-note">Current manuscripts · both under review</p>
+        <ol class="publication-list">
+          <li><article class="publication">
+            <div class="publication-content">
+            <div class="publication-meta"><span class="status">Under review</span><span>First author</span></div>
+            <h3>Monocular Video to Online Humanoid Motion Retargeting via Streaming Motion Estimation</h3>
+            <p class="publication-author"><strong>Zhaoyang Lu</strong> and collaborators</p>
+            <p class="venue">Submitted to CAAI Transactions on Intelligence Technology</p>
+            <p class="publication-description">Streaming motion estimation and inverse-kinematics retargeting for continuous humanoid joint trajectories, evaluated on 3DPW and in Unitree G1/H1 simulation.</p>
+            </div>
+          </article></li>
+          <li><article class="publication">
+            <div class="publication-content">
+            <div class="publication-meta"><span class="status">Under review</span><span>Co-first author · listed first</span></div>
+            <h3>Exploratory Functional Profiling of Older Adults Using Lower-Limb Surface Electromyography</h3>
+            <p class="publication-author"><strong>Zhaoyang Lu</strong> and collaborators</p>
+            <p class="venue">Submitted to Computer Methods and Programs in Biomedicine Update</p>
+            <p class="publication-description">CNN–BiLSTM representations of lower-limb muscle activity for exploratory functional profiling, with subject-level nested leave-one-out validation.</p>
+            </div>
+          </article></li>
+        </ol>
+      </section>
+      <section class="content-section" id="honors-and-awards" aria-labelledby="honors-heading">
+        <div class="section-heading"><h2 id="honors-heading">Honors &amp; Awards</h2><span class="section-number" aria-hidden="true">04</span></div>
+        <ul class="awards-list">
+          <li><span class="award-year">2024, 2025</span><div><h3>Innovation and Entrepreneurship Scholarship</h3><p>Shanghai University</p></div></li>
+          <li><span class="award-year">2025</span><div><h3>National First Prize <span class="award-detail">· China Robot Competition &amp; RoboCup China</span></h3><p>Table tennis robot, 2D skills finals · 5th place</p></div></li>
+          <li><span class="award-year">2025</span><div><h3>Honorable Mention <span class="award-detail">· MCM/ICM</span></h3><p>Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling</p></div></li>
+          <li><span class="award-year">2024</span><div><h3>Silver Medals <span class="award-detail">· ICPC Asia Regionals</span></h3><p>Nanjing Regional &amp; Shenyang Regional</p></div></li>
+          <li><span class="award-year">2024</span><div><h3>Bronze Medal <span class="award-detail">· CCPC Zhengzhou</span></h3><p>China Collegiate Programming Contest</p></div></li>
+          <li><span class="award-year">2024</span><div><h3>National Second Prize <span class="award-detail">· CUMCM</span></h3><p>Contemporary Undergraduate Mathematical Contest in Modeling</p></div></li>
+          <li><span class="award-year">2023</span><div><h3>Provincial Second Prize <span class="award-detail">· Chinese Mathematics Competitions</span></h3><p>Non-mathematics Category A</p></div></li>
+        </ul>
+      </section>
+      <section class="content-section" id="education" aria-labelledby="education-heading">
+        <div class="section-heading"><h2 id="education-heading">Education</h2><span class="section-number" aria-hidden="true">05</span></div>
+        <div class="education-entry">
+          <div class="education-topline"><h3>Shanghai University</h3><span>Sep 2023 – Jul 2027 <span class="expected">(expected)</span></span></div>
+          <p class="degree">Bachelor's studies in Artificial Intelligence</p>
+          <p><span class="gpa">GPA <strong>3.65 / 4.0</strong></span></p>
+          <p class="coursework"><span>Selected coursework:</span> Machine Learning, Data Structures, Computer Networks, Operating Systems, and Virtual Reality.</p>
         </div>
-   </div>
-   <footer>
-    <p id="totalVisits">总访问量：0</p>
-    <p id="currentVisitors">当前在线人数：0</p>
-   </footer>
-   
-   <script src="js/base.js"></script>
+      </section>
+      <section class="content-section hobbies-section" id="hobbies" aria-labelledby="hobbies-heading">
+        <div class="section-heading"><h2 id="hobbies-heading">Hobbies</h2><span class="section-number" aria-hidden="true">06</span></div>
+        <p>Outside of research, I enjoy the challenge of competitive programming, the worlds of anime, comics and games, and going for a run.</p>
+        <ul class="hobby-list" aria-label="Personal interests">
+          <li class="hobby-code"><span class="hobby-illustration" aria-hidden="true"><svg viewBox="0 0 80 64"><rect x="8" y="8" width="64" height="48" rx="8"/><path d="M8 21h64M18 15h1m6 0h1m6 0h1m0 16-8 7 8 7m17-14 8 7-8 7m-8-17-5 20"/></svg></span><span class="hobby-label">Competitive programming</span></li>
+          <li class="hobby-acg"><span class="hobby-illustration" aria-hidden="true"><svg viewBox="0 0 80 64"><path d="M24 22h32c11 0 16 25 9 30-4 3-12-8-15-8H30c-3 0-11 11-15 8-7-5-2-30 9-30Z"/><path d="M25 28v13m-6-6h12m23-6v1m7 6v1M38 22v-6c0-6 9-2 9-9"/><path d="m65 9 1.5-5L68 9l5 1.5-5 1.5-1.5 5L65 12l-5-1.5Z"/></svg></span><span class="hobby-label">ACG</span></li>
+          <li class="hobby-running"><span class="hobby-illustration" aria-hidden="true"><svg viewBox="0 0 80 64"><path d="m27 19 12 10 10-5 3 11 15 8c6 3 4 11-3 11H20c-9 0-9-8-5-13l12-22Z"/><path d="M13 46h57M38 30l-5 5m12-3-5 6m13-2-5 6M8 25h9M5 33h9M3 41h6"/></svg></span><span class="hobby-label">Running</span></li>
+        </ul>
+      </section>
+      <footer class="site-footer"><p>© <span id="copyright-year">2026</span> Zhaoyang Lu</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+    </main>
+  </div>
 </body>
 </html>
