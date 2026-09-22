@@ -85,7 +85,11 @@ mark { color: #2d526b; padding: 1px 3px; border-radius: 2px; background: #edf3f7
 .venue { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 2px; }
 .publication-description { margin-top: 11px; font-size: 13px; line-height: 1.85; color: var(--muted); }
 .awards-list { display: grid; gap: 20px; }
-.awards-list li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 21px; align-items: baseline; }
+.awards-list li { display: grid; grid-template-columns: 86px 60px minmax(0, 1fr); gap: 18px; align-items: center; }
+.award-logo { display: flex; align-items: center; justify-content: center; width: 60px; height: 52px; }
+.award-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.award-icon img { width: 42px; height: 42px; }
+.award-copy { min-width: 0; }
 .award-year { color: var(--muted); font-size: 11px; font-weight: 600; white-space: nowrap; }
 .awards-list h3 { font-size: 13px; font-weight: 750; line-height: 1.8; }
 .award-detail { font-weight: 450; }
@@ -123,7 +127,9 @@ mark { color: #2d526b; padding: 1px 3px; border-radius: 2px; background: #edf3f7
   .avatar { width: 145px; height: 145px; }
   .profile h1 { font-size: 27px; }
   .contact-list li { font-size: 11px; gap: 8px; }
-  .news-list li, .awards-list li { grid-template-columns: 77px minmax(0, 1fr); gap: 15px; }
+  .news-list li { grid-template-columns: 77px minmax(0, 1fr); gap: 15px; }
+  .awards-list li { grid-template-columns: 70px 52px minmax(0, 1fr); gap: 13px; }
+  .award-logo { width: 52px; height: 48px; }
 }
 @media (max-width: 760px) {
   :root { --header-height: 112px; }
@@ -152,8 +158,12 @@ mark { color: #2d526b; padding: 1px 3px; border-radius: 2px; background: #edf3f7
   .publication h3 { font-size: 17px; }
   .publication-description, .publication-author { font-size: 12px; }
   .venue { font-size: 11px; }
-  .awards-list li { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; }
-  .award-year { font-size: 10px; }
+  .awards-list { gap: 24px; }
+  .awards-list li { grid-template-columns: 46px minmax(0, 1fr); gap: 3px 14px; align-items: start; }
+  .award-logo { grid-column: 1; grid-row: 1 / span 2; width: 46px; height: 46px; align-self: center; }
+  .award-icon img { width: 36px; height: 36px; }
+  .award-year { grid-column: 2; grid-row: 1; font-size: 10px; }
+  .award-copy { grid-column: 2; grid-row: 2; }
   .awards-list h3 { font-size: 12px; }
   .awards-list p { font-size: 11px; }
   .education-topline { display: block; }

@@ -25,7 +25,7 @@ The email is `2404412990@shu.edu.cn`. The avatar and GitHub contact link both le
 
 Content was adapted from the supplied CV and personal statement. Both manuscripts are explicitly labeled **Under review**, not published or accepted. Full author lists, paper links, and acceptance details can be added when available. News dates describe documented project milestones and awards. ACG and running were supplied by the site owner. Private application documents are not included in this repository.
 
-Small contact and hobby icons are inline SVGs in `index.html`. The page uses no decorative illustrations, background patterns, or colored section panels.
+Small contact and hobby icons are inline SVGs in `index.html`. Honors & Awards uses local contest/organizer logos and subject icons in `img/awards/`; see `img/awards/SOURCES.md` for provenance and the distinction between official logos and decorative icons. The page keeps its white background and uses no colored section panels.
 
 ## Repository and publishing
 
